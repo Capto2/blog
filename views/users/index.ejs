@@ -1,0 +1,40 @@
+<%- include("partials/header"); -%>
+<style>
+  a {
+    text-decoration: none;
+  }
+  .blog-header-logo {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #000;
+    transition: transform 0.5s;
+  }
+  .blog-header-logo:hover {
+    transform: translateY(-10px);
+    -webkit-text-fill-color: #3e4141;
+    z-index: 2;
+  }
+  div.card{
+    margin-bottom: 2rem;
+  }
+  div.card h1{
+    margin-left: 20px;
+    text-transform: capitalize;
+  }
+  span.card-title{
+    margin-left: 20px;
+    text-transform: capitalize;
+    color: rgb(139, 139, 187);
+    font-weight: 800;
+  } 
+</style>
+<div class="container">
+  <% blogCard.forEach(function(blogs){ %>
+    <div class="card">
+      <h1 class="card-head"><%=blogs.title %></h1>
+      <span class="card-title"><%=blogs.category %></span>
+      <p class="card-body"><%=blogs.content %></p>
+    </div>
+  <% }); %>
+</div>
+
+<%- include("partials/footer"); -%>

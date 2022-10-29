@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piperbird Admin Blog Login</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins' sans-serif;
+        }
+        .container{
+          width: 100%;
+          align-items: center;
+          align-content: center;
+          text-align: center;
+          margin-top: 15%;
+        }
+        .header-box{
+          text-decoration: double;
+          font-family: Arial, Helvetica, sans-serif;
+          display: inline-block;
+          text-align: center;
+          font-weight: 800;
+          font-style: normal;
+          font-size: 50px;
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke: 2px #5f5959;
+          z-index: 2;
+        }
+
+        .input-box{
+          width: 100%;
+          display: inline-block;
+          margin-top: 1.5rem;
+        }
+
+        .input-label{
+          text-transform: capitalize;
+          font-weight: 900;
+          font-size: 1.23rem;
+        }
+
+        .form-input{
+          height: 1rem;
+          width: 50%;
+          padding: 1rem;
+          text-align: center;
+        }
+        .form-input-btn{
+          margin-top: 1rem;
+          margin-left: 10%;
+          height: 3rem;
+          width: 40%;
+          font-weight: 700;
+          font-style: normal;
+          font-size: larger;
+          text-align: center;
+          border: 0;
+          background-color: #413c3c;
+        }
+        .form-input-btn:hover{
+          background-color: #d191d1;
+          color: #fff;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-box">
+            <span>Piperbird</span>
+        </div>
+        <div class="form-box">
+            <form action="/login" method="post">
+                <div class="input-box">
+                    <label for="username" class="input-label">username: </label><input type="text" name="username" id="username" placeholder="Enter username" class="form-input" />
+                </div>
+                <div class="input-box">
+                    <label for="password" class="input-label">password: </label><input type="password" name="password" id="password" placeholder="Enter password" class="form-input" />
+                </div>
+                <button type="submit" class="form-input-btn">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<%- include("partials/header"); -%>
+    <% blogCard.forEach(function(blogs){ %>
+        <div class="card">
+            <div class="card-head">
+                <span><%=blogs.title %></span>
+            </div>
+            <div class="card-title">
+                <span><%=blogs.category %></span>
+            </div>
+            <div class="card-body">
+                <p><%=blogs.content %></p>
+                <div class="edit-box">
+                  <form action="/delete" method="post">
+                    <button style="float: left;" name="delete_btn" class="btn btn-lg" type="submit" value="<%=blogs._id %>"><span class="material-symbols-sharp">
+                      delete
+                      </span></button>
+                    <button type="button" onclick="hidePath()" style="float: right;" class="btn btn-lg"><span class="material-symbols-sharp">
+                      edit
+                      </span></button>
+                  </form>
+                  <form action="/update" id="hideElement" method="post">
+                    <br />
+                    <br />
+                    <br />
+                    <label for="title">Title: </label><input type="text" name="title" id="title" class="form-control" />
+                    <br />
+                    <label for="content">Content: </label><textarea name="content" id="content" class="form-control" cols="30" rows="10"></textarea>
+                    <br />
+                    <button style="float: right;" name="edit_btn" class="btn btn-lg" type="submit" value="<%=blogs._id %>"><span class="material-symbols-sharp">done</span></button>
+                  </form>
+                </div>
+            </div>
+            <style>
+              form#hideElement{
+                display: none;
+              }
+            </style>
+        </div>
+    <% }); %>
+</main>
+</div>
+</div>
+<script src="/jscript/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
